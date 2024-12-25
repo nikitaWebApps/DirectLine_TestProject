@@ -19,10 +19,13 @@ useHead({
 </script>
 
 <template>
-  <div class="content">
+
+  <div class="container">
     <Header />
     <FiltersAndSearch />
-    <NuxtPage />
+    <div class="content">
+      <NuxtPage />
+    </div>
     <Footer />
   </div>
 </template>
@@ -37,14 +40,17 @@ body {
   font-family: 'Rubik', 'system-ui', 'sans-serif';
 }
 
+.container {
+ max-width: 1232px;
+  padding: 0 1rem;
+  margin: auto;
+}
+
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100dvh;
-  max-width: 1232px;
-  padding: 0 1rem;
-  margin: auto;
+  min-height: 500px;
+ 
 }
 
 /* Global text styles */
